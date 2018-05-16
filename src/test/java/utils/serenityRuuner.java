@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = {"/home/padmaa/Applications/hmrc-development-environment/hmrc/serenityJava/src/test/resources/features"},
+        features = {"/home/user01/Applications/hmrc-development-environment/hmrc/serenityJava/src/test/resources/features"},
         glue = {"stepdefs"}
 )
 public class serenityRuuner {

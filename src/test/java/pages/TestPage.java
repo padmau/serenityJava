@@ -33,6 +33,13 @@ public class TestPage extends PageObject{
     String dep = "nav-link-shopall";
     String FandG = "span.nav-hasPanel:nth-child(18)>span:nth-child(1)";
     String grocery = "div.nav-template:nth-child(17)>div:nth-child(2)>a:nth-child(1)";
+    String todaysDeals = "#nav-xshop > a:nth-child(3)";
+    String dealsUnder15 = "#widgetFilters > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > a:nth-child(1)";
+    String allHiddenItemsList = "nav-link-shopall";
+    String furniture = "#shopAllLinks > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > a:nth-child(1)";
+    String sofaAndCouches = "div.a-span3:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > span:nth-child(1)";
+    String textSofaAndCouches = ".bxw-pageheader__title__text > h1:nth-child(1)";
+
 
 
     public void findEx(String text){
@@ -79,5 +86,29 @@ public class TestPage extends PageObject{
     public void clickAddToBasket(){
         addToBasket.click();
     }
+
+    public void clickTodaysDeals() { findBy(todaysDeals).click();}
+
+    public void clickUnder15Pounds() {
+        try {
+            find(By.cssSelector(dealsUnder15)).click();
+
+        } catch(Exception e) {
+            System.out.println("**************************************"+e);
+        }
+    }
+
+    public void clickHiddenList() {
+        find(By.id(allHiddenItemsList)).waitUntilClickable();
+    }
+
+    public void clickFurniture() {
+        findBy(furniture).click();
+    }
+
+    public void clickSofaAndCouches(){ findBy(sofaAndCouches).click();}
+
+    public void getTextSofaAndCouches() {
+        findBy(textSofaAndCouches).getText(); }
 
 }
