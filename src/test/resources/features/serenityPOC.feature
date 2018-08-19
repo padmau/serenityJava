@@ -30,3 +30,17 @@ Feature: As a amazon online shopping user I would wish to explore the website
     And I select 'Lindt Lindor Milk Cornet' on the products page
     When I click add to the basket on the product page
     Then I see the shopping cart has 2 item in it
+
+  @Error
+  Scenario: Verify Today's deals and check under 15 pounds deals
+    Given I navigate to amazon website
+    And I click Today's Deals
+    And I click under 15 pounds deals
+
+  @Ignored
+  Scenario: Click shop by department and naviagte to shop by furniture department
+    Given I navigate to amazon website
+    And I click Shop by Department hidden list
+    And I click Furniture in Home,Garden,Pets and DIY department
+    And I click Sofa and couches in the furniture department
+    Then I see Sofa and Couches in the H2
