@@ -30,3 +30,5 @@ Feature: As a amazon online shopping user I would wish to explore the website
     And I select 'Lindt Lindor Milk Cornet' on the products page
     When I click add to the basket on the product page
     Then I see the shopping cart has 2 item in it
+
+    Scenario: Search in 'All Deparments' for Electronics 
