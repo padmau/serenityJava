@@ -1,6 +1,7 @@
-
+@issue:TAXCP-146
 Feature: As a amazon online shopping user I would wish to explore the website
-  to understand it's functionality
+
+   Story: Amazon website exploratory testing
 
   Scenario Outline: Select books in the search and type in harry potter and check the first result option has harry potter in it
     Given I navigate to amazon website
